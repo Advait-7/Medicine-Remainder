@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-MQo3GriN7hP2NA8bJhBGN6gh8NssFUsWs8PS4Zi2qYfIc1qAw6JMOhZO3ADQ6S2f+J4A2BOY99v5zMKUq1lf7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Medicine Reminder</title>
+</head>
+<body>
+    <img src="pharmacy-background.jpg" alt="">
+    <div class="container">
+        <h1><i class="fas fa-pills"></i> Medicine Reminder</h1>
+        <div id="medicineList"></div>
+        <button class="add-button" onclick="openAddMedicineModal()"><i class="fas fa-plus"></i> Add Medicine</button>
+    </div>
+
+    <div id="addMedicineModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddMedicineModal()">&times;</span>
+            <h2>Add Medicine</h2>
+            <label for="medicineName">Medicine Name:</label>
+            <input type="text" id="medicineName">
+            <label for="medicineTime">Time:</label>
+            <input type="time" id="medicineTime">
+            <button class="save-button" onclick="addMedicine()"><i class="fas fa-save"></i> Save</button>
+        </div>
+    </div>
+     <!-- Add a chat container to display the chat conversation -->
+<!-- Add a container for the popup -->
+<div id="reminderPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-popup" onclick="closeReminderPopup()">&times;</span>
+        <p>It's time to take your medicine!</p>
+        <!-- You can add more details or options here -->
+    </div>
+</div>
+
+<!-- Your existing HTML content -->
+
+<!-- Add a mobile number input to the form -->
+<label for="mobileNumber">Mobile Number:</label>
+<input type="text" id="mobileNumber" placeholder="Enter Mobile Number" required>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
